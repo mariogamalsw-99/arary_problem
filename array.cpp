@@ -143,6 +143,7 @@ public:
                 min = ptr[i];
             }
         }
+        return min;
     }
     int max()
     {
@@ -158,6 +159,7 @@ public:
                 max = ptr[i];
             }
         }
+        return max;
     }
     void reverse()
     {
