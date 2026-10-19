@@ -245,16 +245,63 @@ public:
 
 int main()
 {
-    MYArray a{0,10};
-    MYArray b{0,5};
-    a.display();
-    for (int i=0;i<4;i++)
+    MYArray a{0, 10};
+    MYArray b{0, 5};
+
+    for (int i = 0; i < 4; i++)
     {
-        a.add(i*2);
+        a.add(i * 2);
         b.add(i);
     }
+    std::cout << "A:";
     a.display();
+    std::cout << "B:";
     b.display();
-    std::cout<<std::endl;
+    std::cout << "insert in a[0] value 7";
+    a.insert(0, 7);
+    std::cout << "A:";
+    a.display();
+    std::cout << "remove a[1]";
+    a.remove(1);
+    std::cout << "A:";
+    a.display();
+    std::cout << "Search in A for 7 AND 6:" << a.search(7) << "," << a.search(6) << std::endl;
+    std::cout << "get a[2]" << a.get(2) << std::endl;
+    std::cout << "set a[2] with 99:";
+    a.set(2, 99);
+    std::cout << "A:";
+    a.display();
+    std::cout<<"MIN in A:"<<a.min()<<" MAX in A:"<<a.max()<<std::endl;
+    a.reverse();
+     std::cout << "A after reverse: ";
+    a.display();
+    a.rotateRight(2);
+    std::cout<<"A rotate right by 2: ";
+    a.display();
+    a.rotateLeft(2);
+    std::cout<<"A rotate left by 2: ";
+    a.display();
+    a.shiftLeft(2);
+    std::cout<<"A shift left by 2: ";
+    a.display();
+
+    std::cout<<"B:";b.display();
+    b.shiftRight(2);
+    std::cout<<"B shift right by 2: ";
+    b.display();
+
+     std::cout <<std::endl<<std::endl<< "A:";
+    a.display();
+    std::cout << "B:";
+    b.display();
+    a.merge(b);
+    std::cout<<"A after merge with B: ";
+    a.display();
+    
+    std::cout<<"SUM of A: "<<a.sum()<<" Size of a: "<<a.getSize()<<" AVG of A: "<<a.avg()<<std::endl;
+    
+    // a.display();
+    // b.display();
+    std::cout << std::endl;
     return 0;
 }
