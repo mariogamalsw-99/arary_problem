@@ -179,6 +179,7 @@ public:
     void shiftLeft(int x)
     {
         shiftsubleft(x, x, mysize - 1);
+        mysize-=x;
     }
     void rotateRight(int x)
     {
