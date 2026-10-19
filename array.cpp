@@ -168,6 +168,8 @@ public:
         {
             // swap
             swap(left, right);
+            left++;
+            right--;
         }
     }
     void shiftRight(int x)
