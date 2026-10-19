@@ -101,7 +101,7 @@ public:
     int search(int srch)
     {
         int res = -1;
-        for (int i = 0; i < mysize; i)
+        for (int i = 0; i < mysize; i++)
         {
             if (ptr[i] == srch)
             {
