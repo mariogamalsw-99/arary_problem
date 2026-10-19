@@ -61,7 +61,7 @@ private:
 public:
     MYArray(int s, int cap1) : mysize(s), cap(cap1)
     {
-        int *ptr = new int[cap1];
+        ptr = new int[cap1];
     }
     ~MYArray()
     {
